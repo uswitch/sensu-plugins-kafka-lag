@@ -102,7 +102,7 @@ class CheckLag < Sensu::Plugin::Check::CLI
         :warning
       else
         sleep interval
-        check zk, consumer, topic, partition, n_times, n + 1, interval, init
+        check zk, consumer, topic, partition, threshold, n_times, n + 1, interval, init
       end
     else
       :ok
